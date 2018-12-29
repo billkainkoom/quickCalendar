@@ -1,0 +1,93 @@
+$primaryColor:#BD524E;
+body{
+    
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    justify-content: center;
+    .body{        
+        width: 1000px;
+
+        h1{
+            font-size: 10rem;
+            font-weight: bold;
+            margin-bottom: 0px;
+            background-color: #666666;
+            -webkit-background-clip: text;
+            -moz-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            text-shadow: rgba(255,255,255,0.5) 0px 3px 3px;
+
+        }
+
+        .title{
+            font-size: 3rem;
+            margin-bottom: 48px;            
+            background-color: #666666;
+            -webkit-background-clip: text;
+            -moz-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            text-shadow: rgba(255,255,255,0.5) 0px 3px 3px;
+        }
+        
+       
+        ul {
+            margin: 0;            
+            justify-content: center;
+            display: flex;
+            flex-direction: row;
+            padding: 0px;
+            text-decoration: none;
+            flex-wrap: wrap;
+                 
+
+            li{  
+                flex: 1 0 24%;
+                display: inline-block;              
+                text-decoration: none;
+                width: 30%;
+                
+                background: snow;                
+                margin: 16px;
+                border-radius: 5px;
+                box-shadow: 0 45px 100px rgba(0, 0, 0, 0.4);
+
+                .monthNumber{
+                    font-weight: bold;
+                    font-size: 3rem;
+                    color: $primaryColor;
+                }
+                .monthName{
+                    font-weight: bold;
+                    color: $primaryColor;
+                }
+                .calendar{
+                    width: 100%;
+                    
+                    table{
+                        width: 100%;
+                        padding: 5%;
+
+                        td{
+                            width:14.28%;
+                        }
+                    }
+                }
+
+                .monthName,.monthNumber{
+                    margin-right: 16px;
+                    margin-left: 16px;
+                }
+
+                .topImage{
+                    width: 100%;
+                    object-fit: cover;
+                    height: 150px;
+                    border-radius: 5px 5px 0px 0px;
+                }
+                
+            }
+        }
+    }
+}

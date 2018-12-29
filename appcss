@@ -1,0 +1,79 @@
+body {
+  font-family: "Roboto", sans-serif;
+  display: flex;
+  justify-content: center;
+}
+body .body {
+  width: 1000px;
+}
+body .body h1 {
+  font-size: 10rem;
+  font-weight: bold;
+  margin-bottom: 0px;
+  background-color: #666666;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  text-shadow: rgba(255, 255, 255, 0.5) 0px 3px 3px;
+}
+body .body .title {
+  font-size: 3rem;
+  margin-bottom: 48px;
+  background-color: #666666;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  text-shadow: rgba(255, 255, 255, 0.5) 0px 3px 3px;
+}
+body .body ul {
+  margin: 0;
+  justify-content: center;
+  display: flex;
+  flex-direction: row;
+  padding: 0px;
+  text-decoration: none;
+  flex-wrap: wrap;
+}
+body .body ul li {
+  flex: 1 0 24%;
+  display: inline-block;
+  text-decoration: none;
+  width: 30%;
+  background: snow;
+  margin: 16px;
+  border-radius: 5px;
+  box-shadow: 0 45px 100px rgba(0, 0, 0, 0.4);
+}
+body .body ul li .monthNumber {
+  font-weight: bold;
+  font-size: 3rem;
+  color: #BD524E;
+}
+body .body ul li .monthName {
+  font-weight: bold;
+  color: #BD524E;
+}
+body .body ul li .calendar {
+  width: 100%;
+}
+body .body ul li .calendar table {
+  width: 100%;
+  padding: 5%;
+}
+body .body ul li .calendar table td {
+  width: 14.28%;
+}
+body .body ul li .monthName, body .body ul li .monthNumber {
+  margin-right: 16px;
+  margin-left: 16px;
+}
+body .body ul li .topImage {
+  width: 100%;
+  object-fit: cover;
+  height: 150px;
+  border-radius: 5px 5px 0px 0px;
+}
+
+/*# sourceMappingURL=appcss.map */
