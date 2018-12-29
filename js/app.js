@@ -1,17 +1,21 @@
 
+function getImage(name){
+    return "images/"+name
+}
+
 var months = [
-    {name:'January',number:'01',art:'1.jpg'},
-    {name:'Febuary',number:'02',art:'3.jpg'},
-    {name:'March',number:'03',art:'4.jpg'},
-    {name:'April',number:'04',art:'5.jpg'},
-    {name:'May',number:'05',art:'1.jpg'},
-    {name:'June',number:'06',art:'2.jpg'},
-    {name:'July',number:'07',art:'3.jpg'},
-    {name:'August',number:'08',art:'4.jpg'},
-    {name:'September',number:'09',art:'5.jpg'},
-    {name:'October',number:'10',art:'1.jpg'},
-    {name:'November',number:'11',art:'2.jpg'},
-    {name:'December',number:'12',art:'3.jpg'}
+    {name:'January',number:'01',art:getImage('1.jpg')},
+    {name:'Febuary',number:'02',art:getImage('3.jpg')},
+    {name:'March',number:'03',art:getImage('4.jpg')},
+    {name:'April',number:'04',art:getImage('5.jpg')},
+    {name:'May',number:'05',art:getImage('1.jpg')},
+    {name:'June',number:'06',art:getImage('2.jpg')},
+    {name:'July',number:'07',art:getImage('3.jpg')},
+    {name:'August',number:'08',art:getImage('4.jpg')},
+    {name:'September',number:'09',art:getImage('5.jpg')},
+    {name:'October',number:'10',art:getImage('1.jpg')},
+    {name:'November',number:'11',art:getImage('2.jpg')},
+    {name:'December',number:'12',art:getImage('3.jpg')}
 ]
 
 var weekDays = ["Sun","Mon","Tue","Wed","Thu","Fri","Sat"];
