@@ -18,6 +18,21 @@ var months = [
     {name:'December',number:'12',art:getImage('3.jpg')}
 ]
 
+var events = {
+    "January":[{startDate:2,endDate:3,color:"#016CC2"}],
+    "Febuary":[],
+    "March":[{startDate:21,endDate:23,color:"#4a4e4d"}],
+    "April":[],
+    "May":[{startDate:15,endDate:17,color:"#0e9aa7"}],
+    "June":[],
+    "July":[],
+    "August":[{startDate:8,endDate:13,color:"#3da4ab"}],
+    "September":[],
+    "October":[{startDate:2,endDate:2,color:"#f6cd61 "}],
+    "November":[{startDate:2,endDate:5,color:"#fe8a71"}],
+    "December":[]
+}
+
 var weekDays = ["Sun","Mon","Tue","Wed","Thu","Fri","Sat"];
 
 function getDaysInMonth(year,month){
@@ -43,19 +58,46 @@ function getCalendarForMonth(weekDays,year,month){
     }
     calenderHtml += "</tr>";
 
+    var currentMonth = months[month];
     var monthDays = getDaysInMonth(year,month);
+    var monthEvents = events[currentMonth.name]
 
     calenderHtml += "<tr>";
     
     var counter = 0;
     var rowCount = 0;
+
+    function fallsWithinEvent(day){
+        for (var i=0;i<monthEvents.length;i++){
+            var event = monthEvents[i];        
+            if(day>=event.startDate && day<=event.endDate){
+                return {event:event,state:true}
+            }            
+        }
+
+        return {state:false}
+    }
+    
     for(var i=0;i<42;i++){
-        
-        
+                
         if(i<monthDays[0].weekDay){
             calenderHtml += "<td>&nbsp;</td>"
         }else if(counter<monthDays.length){
-            calenderHtml += "<td align='center'>"+monthDays[counter].monthDay+"</td>"
+            var id = currentMonth.name+monthDays[counter].monthDay
+
+            //falls within event
+            var event = fallsWithinEvent(monthDays[counter].monthDay)
+            
+            if(event.state){                
+                calenderHtml += "<td align='center'>"
+                calenderHtml += "<div id='"+id+"' class='event' style='background:"+event.event.color+"'>"
+                calenderHtml += monthDays[counter].monthDay+"</div></td>"
+                calenderHtml += "</div></td>"
+            }else{
+                calenderHtml += "<td align='center'><div id='"+id+"'>"+monthDays[counter].monthDay+"</div></td>"
+            }
+
+            
             counter++;
         }else{
             calenderHtml += "<td>&nbsp;</td>"
@@ -69,6 +111,7 @@ function getCalendarForMonth(weekDays,year,month){
         
     }
     calenderHtml += "</tr>";
+    
     
     return calenderHtml;
 }

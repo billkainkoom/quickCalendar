@@ -65,6 +65,17 @@ body .body ul li .calendar table {
 body .body ul li .calendar table td {
   width: 14.28%;
 }
+body .body ul li .calendar table td div {
+  height: 30px;
+  width: 30px;
+  vertical-align: middle;
+  display: table-cell;
+}
+body .body ul li .calendar table td .event {
+  background: #016CC2;
+  border-radius: 50%;
+  color: white;
+}
 body .body ul li .monthName, body .body ul li .monthNumber {
   margin-right: 16px;
   margin-left: 16px;

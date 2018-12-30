@@ -71,6 +71,19 @@ body{
 
                         td{
                             width:14.28%;
+
+                            div{
+                                height:30px;
+                                width:30px;
+                                vertical-align: middle;
+                                display: table-cell;
+                                
+                            }
+                            .event{
+                                background: #016CC2;
+                                border-radius: 50%;
+                                color: white;
+                            }
                         }
                     }
                 }
