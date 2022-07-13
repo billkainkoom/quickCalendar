@@ -1,3 +1,3 @@
 # quickCalendar
 
-See demo here http://calendar.berylworld.com/
+https://billkainkoom.github.io/quickCalendar/index.html
